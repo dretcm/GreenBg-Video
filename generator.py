@@ -5,6 +5,7 @@ import numpy as np
 import subprocess
 import os
 from PyQt5.QtCore import QThread
+from dialogs import Dialogs
 
 class RenderVideo(QThread):
         def __init__(self, photo=None, video=None, output=None):
@@ -19,7 +20,7 @@ class RenderVideo(QThread):
                         self.generate_video()
                         
                 except Exception as e:
-                        print(e)
+                        Dialogs.dialog(text=str(e))
                 
         def create_video(self):
                 cap = cv2.VideoCapture(self.video)
