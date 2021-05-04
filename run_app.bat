@@ -17,6 +17,7 @@ pip install ffmpeg-python
 pip install numpy
 pip install pyqt5
 pip install opencv-python
+pip install pytube
 goto start
 
 
