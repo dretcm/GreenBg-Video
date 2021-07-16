@@ -1,25 +1,22 @@
 @echo off
 
+set /p restart=refresh the environment(y/n)?
+
 call conda activate base
 
-SET /p option=do you want install packagues? (y/n):
-
-if %option%==y (goto install_packagues) else goto start
+if %restart%==y (goto pytube) else goto start
 
 :start
+call conda activate base
 python main.py
 call conda deactivate
 goto finish
 
-
-:install_packagues
-pip install ffmpeg-python
-pip install numpy
-pip install pyqt5
-pip install opencv-python
+:pytube
+echo refreshing pytube...
+pip uninstall -y pytube
 pip install pytube
 goto start
-
 
 :finish
 pause

@@ -2,10 +2,10 @@
 
 import sys
 from PyQt5.QtWidgets import (QWidget, QApplication,QTabWidget)
-from data.interface_youtube import InterfaceDownloader
-from data.interface_generator import Background_app
-from data.interface_meme import Interface_Meme
-from data.dialogs import Dialogs
+from interface_youtube import InterfaceDownloader
+from interface_generator import Background_app
+from interface_meme import Interface_Meme
+from dialogs import Dialogs
 
 class Interface(QWidget):
     def __init__(self):
