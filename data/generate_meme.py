@@ -38,7 +38,7 @@ class RenderMeme(QThread):
                 width, height = int(cap.get(3)), int(cap.get(4))
                 
                 codec = cv2.VideoWriter_fourcc(*"MP4V")
-                out = cv2.VideoWriter(path, codec , 20.0, (width, height))
+                out = cv2.VideoWriter(path, codec , 30.0, (width, height))
                                          
                 while (True):
                         ret, frame = cap.read()
